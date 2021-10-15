@@ -8,7 +8,7 @@ def cls():
     os.system('cls' if os.name=='nt' else 'clear')
 cls()
 
-# --
+# -- I like to clear my terminal
 
 empty_list = [] # creates an empty list
 even = [2,4,6,8]
