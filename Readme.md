@@ -5,6 +5,7 @@
     - https://www.udemy.com/course/python-the-complete-python-developer-course/
 2. I'll be using vscode as my IDE
 3. I'll keep a github of all the applications and exercises worked on during the classes
+    - https://github.com/j0nnnnn0/udemy_python
 
 
 ## Python Documentation
