@@ -3,7 +3,7 @@
 # Lists - sequence Operations 
 # Lists - Nested Lists
 
-
+# %%
 import os
 
 def cls():
@@ -11,19 +11,19 @@ def cls():
 cls()
 
 # -- I like to clear my terminal
-
+# %%
 empty_list = [] # creates an empty list
 even = [2,4,6,8]
 odd = [1,3,5,7,9]
-
 # Nested lists
-
+# %%
 print("start")
 numbers = [even , odd]
 print(numbers)
 print()
 # [[2, 4, 6, 8], [1, 3, 5, 7, 9]] creates nested lists
 
+# %%
 # splits lists
 for number_list in numbers:
     print(number_list)
