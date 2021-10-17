@@ -1,7 +1,7 @@
 # Python Programming Class - Udemy 16.10.2021
 
 # Lists -  Nested List -  Challenge
-
+# join
 
 import os
 from types import SimpleNamespace
@@ -35,19 +35,19 @@ getoff = "spam"
 # delete index of meal if equal to spam
 # print meal
 
-# for meal in menu:
-#     for index in range(len(meal) -1, -1, -1):
-#         if meal[index] == getoff:
-#             del meal[index]
-#     print(meal)
+for meal in menu:
+    for index in range(len(meal) -1, -1, -1):
+        if meal[index] == getoff:
+            del meal[index]
+    print(", ".join(meal))
         
 
 #   Print out the items in each list as long as it is not spam
 # loop meal through the menu
 # loop through each meal 
 # if items in meal not spam, print
-for meal in menu:
-    for item in meal:
-        if item != getoff:
-            print(item)
-    print()
+# for meal in menu:
+#     for item in meal:
+#         if item != getoff:
+#             print(item, end = ", ")
+#     print()
