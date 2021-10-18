@@ -1,15 +1,17 @@
 # Python Programming Class - Udemy 17.10.2021
 
-# Tuples - Intro
+# Tuples - Intro & unpacking
 # Tuples are "Immutable"
 
 import os
 
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
+
 cls()
 
 # ---
+
 # t = ("a", "b", "c")
 # print(t)
 # output is in parentheses (tuble) rather than brackets (list)
@@ -18,17 +20,17 @@ cls()
 # name = "Jonathan"
 # age = 10
 
-# print((name, age, "Python", 2020)) 
+# print((name, age, "Python", 2020))
 # # adding parentheses means we prints a tuble
 # # ('Jonathan', 10, 'Python', 2020)
 
 # ---
 
-welcome = "Welcome to my Nightmare", "Alice Cooper", 1975
-bad = "Bad Company", "Bad Company", 1974
-budgie = "Nightflight", "Budgie", 1981
-imelda = "More Mayhem", "Emilda May", 2011
-mettalica = "Ride the Lightning", "Metallica", 1984
+# welcome = "Welcome to my Nightmare", "Alice Cooper", 1975
+# bad = "Bad Company", "Bad Company", 1974
+# budgie = "Nightflight", "Budgie", 1981
+# imelda = "More Mayhem", "Emilda May", 2011
+# mettalica = "Ride the Lightning", "Metallica", 1984
 
 # # ---
 # print(mettalica)
@@ -53,15 +55,36 @@ mettalica = "Ride the Lightning", "Metallica", 1984
 # print(mettalica2)
 
 # --- Unpack the Tuple
-title, artist, year = mettalica
-print(title)
-print(artist)
-print(year)
-print()
+# title, artist, year = mettalica
+# print(title)
+# print(artist)
+# print(year)
+# print()
 
-table = ("Coffee table", 200, 100, 75, 34.50)
-print("area of table: {}".format(table[1] * table[2]))
-name, length, width, hight, depth = table
-print("area of table: {}".format(length * width))
+# table = ("Coffee table", 200, 100, 75, 34.50)
+# print("area of table: {}".format(table[1] * table[2]))
+# name, length, width, hight, price = table
+# print("area of table: {}".format(length * width))
 
 
+# -- Albums list has 5 Nested tuples
+
+albums = [("Welcome to my Nightmare", "Alice Cooper", 1975),
+          ("Bad Company", "Bad Company", 1974),
+          ("Nightflight", "Budgie", 1981),
+          ("More Mayhem", "Emilda May", 2011),
+          ("Ride the Lightning", "Metallica", 1984),
+          ]
+print(len(albums))
+
+for name, artist, year in albums: # unpacking the tuple
+    print("Album: {}, Artist: {}, Year: {}"
+          .format(name, artist, year))
+
+print("*" * 20)
+
+#Does the same thing, unpacks the tuple but not as efficient
+for album in albums:
+    name, artist, year = album # <---
+    print("Album: {}, Artist: {}, Year: {}"
+        .format(name, artist, year))

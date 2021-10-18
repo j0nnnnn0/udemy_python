@@ -10,14 +10,52 @@ cls()
 
 # ----
 
-available_parts = ["computer", 
-                   "monitor",
-                   "keyboard",
-                   "mouse",
-#                   "mouse mat",
-                   "hdmi cable",
-                   "DVD drive"
-                   ]
+# Additional Tasks:
+    # Add more items 
+    # Change Available_parts list to store tuples
+    # Each tuple to include name and price
+    # Display price and total price
+# ----
+
+
+available_parts = [
+    ("computer", "HP",
+        [
+            ("name", "HP-001"),
+            ("price", 800),
+        ]
+    ),
+    ("monitor", "Dell",
+        [
+            ("name", "Dell-002"),
+            ("price", 300),
+        ]
+    ),
+    ("keyboard", "Logitech",
+        [
+            ("name", "G815 (Tactical)"),
+            ("price", 150),
+        ]
+    ),
+    ("mouse", "Logitech",
+        [
+            ("name", "Pro Wireless X"),
+            ("price", 99.99),
+        ]
+    ),
+    ("hdmi cable", "ACME Distribution",
+        [
+            ("name", "Pro HDMI 2.0 braded"),
+            ("price", 34.59),
+        ]
+    ),
+    ("printer", "EPSON",
+        [
+            ("name", "Epson Office Pro A3"),
+            ("price", 478),
+        ]
+    )
+                ]
 
 valid_choices = []
 # valid_choices = [str(i) for i in range(1, len(available_parts) +1)]
