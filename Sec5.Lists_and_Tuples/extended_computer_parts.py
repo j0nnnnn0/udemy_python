@@ -1,20 +1,39 @@
+# Python Programming Class - Udemy 17.10.2021
+
+# Lists - Chapter end exercise
+
+import os
+
+def cls():
+    os.system('cls' if os.name=='nt' else 'clear')
+cls()
+
+# ----
+
+# Additional Tasks:
+    # Add more items 
+    # Change Available_parts list to store tuples
+    # Each tuple to include name and price
+    # Display price and total price
+# ----
+
 available_parts = [
     ("computer", "HP",
         [
             ("name", "HP-001"),
-            ("price", 800),
+            ("price", 799.99),
         ]
     ),
     ("monitor", "Dell",
         [
             ("name", "Dell-002"),
-            ("price", 300),
+            ("price", 299.99),
         ]
     ),
     ("keyboard", "Logitech",
         [
             ("name", "G815 (Tactical)"),
-            ("price", 150),
+            ("price", 150.49),
         ]
     ),
     ("mouse", "Logitech",
@@ -49,21 +68,25 @@ for type, brand, (model, price) in available_parts:
           .format(type, brand, model[1], price[1]))
 print()
 
+# Initialising
+
 valid_choices = []
-# valid_choices = [str(i) for i in range(1, len(available_parts) +1)]
+valid_choices = [str(i) for i in range(1, len(available_parts) +1)]
 for i in range (1, len(available_parts) + 1):
     valid_choices.append(str(i))
-print("valid choices are : ",valid_choices)
 
 current_choice = "-" # initialise the variable
 computer_parts = [] # create an empty list
-bill = [] # Initiate an emply Bill list
+bill = [] # Initiate an emply list
+
+#Constants
 PART_DETAIL_INDEX = 1
 BILL_DETAIL_INDEX = 1
 DETAILS_INDEX = 2
 PRICE_INDEX = 1
-tax = 0.075
+VAT = float(0.075)
 
+#Main code
 while current_choice != "0":
     if current_choice in valid_choices:
         index = int(current_choice) -1 # substract 1 from each current_choice to match indexing of available_parts
@@ -87,18 +110,21 @@ while current_choice != "0":
    
     current_choice = input("Make your selection: ")
 
-print("You have selected {} items: ".format(len(computer_parts)))
-
-# for i in range(index(computer_parts) + 1):
-#     for index, (type, brand, (name, price)) in enumerate(computer_parts):
-#         print("{}. Type: {}, Brand: {}, Name: {}, Price: CHF{}"
-#               .format(index, type, brand, name , price))
-
+# The bill
+cls()
+print("-" *40)
+print("You are buying {} item(s): ".format(len(computer_parts)))
 for number, (type, brand, (name, price)) in enumerate(computer_parts):
-    print ("{}: A {} by {} named {} costing CHF {}".format(number +1, type, brand, name[PART_DETAIL_INDEX], price[PART_DETAIL_INDEX]))
+    print ("{}: The {} {} from {} costing CHF {}".format(number +1, name[PART_DETAIL_INDEX], type, brand, price[PART_DETAIL_INDEX]))
 
-res = sum(list(bill))
-print("Itemised bill is CHF {}".format(res))
-print("Your TOTAL bill (incl. tax) is CHF {}".format(res + res * tax))
-print("Your TOTAL bill (incl. tax) is CHF {}".format(round(res + res * tax), 2))
+# Calculate the bill
+gross = float(sum(list(bill)))
+vat = float(gross * VAT)
+net = float(gross + vat)
+
+print("_" *40)
+print("Your bill:")
+print("- Itemised      is CHF {}".format(round(gross, 2)))
+print("- VAT (@7.5%)   is CHF {}".format(round(vat, 2)))
+print("- TOTAL         is CHF {}".format(round(net, 2)))
 
