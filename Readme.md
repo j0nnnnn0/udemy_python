@@ -10,10 +10,10 @@
 ## Sections
 1. Course Intro
 2. Install and Setup
-3. Into the world of Python
-4. Program Flow Control in Python
-5. Lists and Tuples
-6. Functions - Intro
+3. Into the world of Python (https://github.com/j0nnnnn0/udemy_python/tree/master/Sec3.Intro)
+4. Program Flow Control in Python (https://github.com/j0nnnnn0/udemy_python/tree/master/Sec4.ProgramFlow)
+5. Lists and Tuples (https://github.com/j0nnnnn0/udemy_python/tree/master/Sec5.Lists_and_Tuples)
+6. Functions - Intro (https://github.com/j0nnnnn0/udemy_python/tree/master/Sec6.Functions_Intro)
 7. Dictionaries and Sets
 8. I/O in Python
 9. Modules and Functions in Python
