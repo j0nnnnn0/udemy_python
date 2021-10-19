@@ -28,3 +28,4 @@
 3. https://docs.python.org/3/library/stdtypes.html#sequence-types-list-tuple-range Sequence Types
 4. https://www.python.org/dev/peps/pep-0008/ Style Guide
 5. https://google.github.io/styleguide/pyguide.html Google Python Style Guide
+6. https://docs.python.org/3/library/stdtypes.html#string-methods String Method
