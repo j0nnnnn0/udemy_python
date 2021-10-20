@@ -10,27 +10,26 @@ cls()
 
 # ---
 
+# Defining a new function:
 def multiply(x, y): # Define nameOfFunction(parameters)
+    """Multiply two `int` values
+    
+    The function will return the product of two arguments x and y.
+    
+    Args:
+        x (`int`): first argument
+        y (`int`): second argument
+
+    Returns:
+        [`int`]: The returned product 
+    """
     result = x * y
-    return result # need to retun the code
+    return result # need to return the code, if omitted returns 0
 # two break lines for function (pep8)
 
 
-def is_palindrome(string):
-    #  backwards = string[::-1] # slice reverses the original string
-    #  return backwards == string # evaluate true or false
-    return string[::-1].casefold() == string.casefold()
-
-
-word = input("Please enter a word to check: ")
-if is_palindrome(word):
-    print("'{}' is a palindrome". format(word))
-else:
-    print("'{}' is not a palindrome".format(word))
-
-
-
-
+answer = multiply(18,3)
+print(answer)
 
 # answer = multiply(10.5, 4) # matches the parameter in the function
 # print(answer)
@@ -48,3 +47,17 @@ else:
 # # 4   
 # # 6   
 # # 8
+
+
+# Palindrome
+def is_palindrome(string):
+    #  backwards = string[::-1] # slice reverses the original string
+    #  return backwards == string # evaluate true or false
+    return string[::-1].casefold() == string.casefold()
+
+
+# word = input("Please enter a word to check: ")
+# if is_palindrome(word):
+#     print("'{}' is a palindrome". format(word))
+# else:
+#     print("'{}' is not a palindrome".format(word))

@@ -29,3 +29,6 @@
 4. https://www.python.org/dev/peps/pep-0008/ Style Guide
 5. https://google.github.io/styleguide/pyguide.html Google Python Style Guide
 6. https://docs.python.org/3/library/stdtypes.html#string-methods String Method
+7. https://docs.python.org/3/library/exceptions.html Built in Exceptions
+8. https://docs.python.org/3/glossary.html#term-parameter Glossary : Parameter
+9. https://www.python.org/dev/peps/pep-0257/ PEP 257 - Docstring conventions

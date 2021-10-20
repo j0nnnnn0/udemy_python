@@ -24,15 +24,19 @@ cls()
 # Was it a car, or a cat, I saw?
 # Do gess see god?
 # Desnes not far, Rafton sensed.
+def is_palindrome(string):
+    return string[::-1].casefold() == string.casefold()
 
-def palindrome_sentence(sentence):
-    string = ""
+
+def palindrome_sentence(sentence): # function
+    string = "" # declare an empty string
     for char in sentence:
         if char.isalnum(): # built in method to check if character is alphanumeric
             string += char
 
-    print(string, "|", string[::-1])
-    return string[::-1].casefold() == string.casefold()
+    print(string, "|", string[::-1]) # check output 
+    return is_palindrome(string) # calling a function in a function
+#    return string[::-1].casefold() == string.casefold()
 
 word = input("Please enter a word to check: ")
 
