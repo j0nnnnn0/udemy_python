@@ -3,6 +3,7 @@
 # Functions
 # https://docs.python.org/3/library/typing.html Typing - support for type hints
 # https://www.python.org/dev/peps/pep-3107/ Function Annotation
+# https://www.python.org/dev/peps/pep-0008/ PEP 8  annotation for default values
 
 import os
 
