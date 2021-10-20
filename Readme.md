@@ -1,11 +1,9 @@
 
 # Learning Python
 
-1. I'll be following the online udemy course : "Learn Python Programming Masterclass" with Tim Buchalka.
-    - https://www.udemy.com/course/python-the-complete-python-developer-course/
-2. I'll be using vscode as my IDE
-3. I'll keep a github of all the applications and exercises worked on during the classes
-    - https://github.com/j0nnnnn0/udemy_python
+1. Online udemy course : "Learn Python Programming Masterclass" with Tim Buchalka: https://www.udemy.com/course/python-the-complete-python-developer-course/
+2. vscode as the IDE
+3. github of all the applications and exercises worked on during the classes : https://github.com/j0nnnnn0/udemy_python
 
 ## Sections
 1. Course Intro
@@ -32,3 +30,5 @@
 7. https://docs.python.org/3/library/exceptions.html Built in Exceptions
 8. https://docs.python.org/3/glossary.html#term-parameter Glossary : Parameter
 9. https://www.python.org/dev/peps/pep-0257/ PEP 257 - Docstring conventions
+10. https://docs.python.org/3/library/typing.html Typing - support for type hints
+11. https://www.python.org/dev/peps/pep-3107/ Function Annotation
