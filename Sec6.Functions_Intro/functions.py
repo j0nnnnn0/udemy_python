@@ -72,5 +72,3 @@ if is_palindrome(word):
     print("'{}' is a palindrome". format(word))
 else:
     print("'{}' is not a palindrome".format(word))
-    
-p = is_palindrome()

@@ -4,6 +4,9 @@
 1. Online udemy course : "Learn Python Programming Masterclass" with Tim Buchalka: https://www.udemy.com/course/python-the-complete-python-developer-course/
 2. vscode as the IDE
 3. github of all the applications and exercises worked on during the classes : https://github.com/j0nnnnn0/udemy_python
+   (Note: .venv is part of .gitignore so some import may fail)
+
+
 
 ## Sections
 1. Course Intro
