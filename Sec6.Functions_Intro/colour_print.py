@@ -24,7 +24,6 @@ MAGENTA = '\u001b[35m'
 CYAN = '\u001b[36m'
 WHITE = '\u001b[37m'
 RESET = '\u001b[0m'
- 
 BOLD = '\u001b[1m'
 UNDERLINE = '\u001b[4m'
 REVERSE = '\u001b[7m'
@@ -32,18 +31,20 @@ REVERSE = '\u001b[7m'
 # print(RED, "This will be in red")
 # print("and so is this")
 
-def colour_print(text: str, effect: str) -> None:
+def colour_print(text: str, *effects: str) -> None:
     """Print text using the ANSI sequences to change colour, etc.
 
     Args:
         text (`str`): The Text to print
-        effect (`str`): The effect we want. One of the contants defined in this module
+        effects (`str`): The effects we want. One of the contants defined in this module
     """
-    output_string = "{}{}{}".format(effect,text, RESET)
+    effect_string = "".join(effects)
+    output_string = "{0}{1}{2}".format(effect_string,text, RESET)
     print(output_string)
 
 colorama.init()
 colour_print("Hello, Red", RED)
+colour_print("Hello, Red in Bold and underlined", RED, BOLD, UNDERLINE)
 # test that the colour was reset
 print("This should be in the default terminal colour")
 colour_print("Hello, Blue", BLUE)
@@ -51,5 +52,5 @@ colour_print("Hello, Yellow", YELLOW)
 colour_print("Hello, Bold", BOLD)
 colour_print("Hello, Underline", UNDERLINE)
 colour_print("Hello, Reverse", REVERSE)
-colour_print("Hello, Black", BLACK)
+colour_print("Hello, white and reversed", WHITE, REVERSE)
 colorama.deinit()
