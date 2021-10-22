@@ -66,6 +66,7 @@ print("valid choices are : ",valid_choices)
 current_choice = "-" # initialise the variable
 computer_parts = [] # create an empty list
 
+available_parts.sort()
 while current_choice != "0":
     if current_choice in valid_choices:
         index = int(current_choice) -1 # substract 1 from each current_choice to match indexing of available_parts
@@ -83,7 +84,7 @@ while current_choice != "0":
         print("Please add options from the list below, Press 0 to end: ")
         for number, part in enumerate(available_parts): # using enumeration
             print("{}: {}".format(number + 1, part))
-   
+
     current_choice = input("Make your selection: ")
 
 print("You have selected {} items: {}".format(len(computer_parts), computer_parts))
