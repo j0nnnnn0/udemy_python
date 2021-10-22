@@ -17,6 +17,3 @@ from contents import pantry, recipes
 print(pantry)
 print()
 print(recipes)
-
-
-
