@@ -14,20 +14,20 @@ cls()
 # Import contents (pantry and recipes from contents.py)
 from contents import pantry, recipes
 
+def add_shopping_item(data:dict, item: str, amount = int) -> None:
+    """Add a tuple containing `items` and `amount`to data dict.
+    Args:
+        data (dict): [description]
+        item (str): [description]
+        amount ([type], optional): [description]. Defaults to int.
+    """
+    # if item in data:
+    #     data[item] += amount
+    # else:
+    #     data[item] = amount
+    data[item] = data.setdefault(item, 0) + amount
+
 # display_dict = {str(index + 1): meal for index, meal in enumerate(recipes)}
-
-# print(pantry)
-# print()
-print(f"recipes dict : {recipes}")
-# recipes dict :
-    # {'Butter chicken': ['chicken', 'lemon', 'cumin', 'paprika', 'chilli powder', 'yogurt', 'oil', 'onion',
-        #  'garlic', 'ginger', 'tomato puree', 'almonds', 'rice', 'coriander', 'lime'],
-    # 'Chicken and chips': ['chicken', 'potatoes', 'salt', 'malt vinegar'], 
-    # 'Pizza': ['pizza'], 
-    # 'Egg sandwich': ['egg', 'bread', 'butter'], 
-    # 'Beans on toast': ['beans', 'bread'], 
-    # 'Spam a la tin': ['spam', 'tin opener', 'spoon']}
-
 # Create a new dictionary to display the available recipes.
 display_dict ={} 
 # enumerate dict recipes into tubles
@@ -50,6 +50,8 @@ for index, key in enumerate(recipes):
         #  recipes enumeration: 5, Spam a la tin
         #  display_dict: {'1': 'Butter chicken', '2': 'Chicken and chips', '3': 'Pizza', '4': 'Egg sandwich', '5': 'Beans on toast', '6': 'Spam a la tin'}
 
+# Create a new dictionary as a shopping_list
+shopping_list = {}
 
 while True:
     #Display menu of recipes we know how to cook
@@ -80,11 +82,16 @@ while True:
         print("checking ingredients against pantry...")
         # enumerate the food items and required quantity in ingredients
         for food_item, required_quantity in ingredients.items():
-            quantity_in_panty = pantry.get(food_item, 0)
+            quantity_in_panty = pantry.get(food_item, 0) # default to 0 if not found
             # match the ingredient to the keys in pantry
-            if food_item in pantry and required_quantity <= quantity:
-                print(f"\t{food_item} is in pantry")
+            if required_quantity <= quantity_in_panty:
+                print(f"{food_item} is in pantry")
             else:
-                print(f"\t{food_item} is missing from pantry")
-
+                quantity_to_buy = required_quantity - quantity_in_panty
+                print(f"\tYou need to buy {quantity_to_buy} of {food_item}")
+                # Adding to shopping list
+                add_shopping_item(shopping_list, food_item, quantity_to_buy)
     print("--------------------------")        
+    
+for things in shopping_list.items():
+    print(things)
