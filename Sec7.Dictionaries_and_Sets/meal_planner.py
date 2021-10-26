@@ -82,7 +82,7 @@ while True:
         for food_item, required_quantity in ingredients.items():
             quantity_in_panty = pantry.get(food_item, 0)
             # match the ingredient to the keys in pantry
-            if food_item in pantry and required_quantity <= quantity:
+            if food_item in pantry and required_quantity <= quantity_in_panty:
                 print(f"\t{food_item} is in pantry")
             else:
                 print(f"\t{food_item} is missing from pantry")
