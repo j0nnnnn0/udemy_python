@@ -26,6 +26,7 @@ def add_shopping_item(data:dict, item: str, amount = int) -> None:
     # else:
     #     data[item] = amount
     data[item] = data.setdefault(item, 0) + amount
+    # setdefault returns the key of the dict if it exists, else create a new entry and sets default value
 
 # display_dict = {str(index + 1): meal for index, meal in enumerate(recipes)}
 # Create a new dictionary to display the available recipes.
