@@ -39,22 +39,62 @@ def simple_hash(s: str) -> int:
     return basic_hash % 10
 
 
-for key, value in data:
-    h = hash(key) # python buildd-in hash function
-    print(key, h)
-    # Python hashing function  
-    # orange -3338097763250883852
-    # apple 8737112910325991482  
-    # lemon 7405836599848562996  
-    # grape -4407472485428989117 
-    # melon 1931814110581799179
+def get(k: str) -> str:
+    """[summary] Return the value for a key, 
+    or None if the key doesn't exist
+
+    Args:
+        k (str): [description]
+
+    Returns:
+        str: [description]
+    """
+    hash_code = simple_hash(k)
+    if values[hash_code]:
+        return values[hash_code]
+    else:
+        return None
+        
+        
+# for key, value in data:
+#     h = hash(key) # python buildd-in hash function
+#     print(key, h)
+#     # Python hashing function  
+#     # orange -3338097763250883852
+#     # apple 8737112910325991482  
+#     # lemon 7405836599848562996  
+#     # grape -4407472485428989117 
+#     # melon 1931814110581799179
     
+# for key, value in data:
+#     h = simple_hash(key) # our hash function
+#     print(key, h) 
+#     # our hash function
+#     # orange 1
+#     # apple 7 
+#     # lemon 8 
+#     # grape 3 
+#     # melon 9 
+
+
+
+keys = [""] * 10
+values = keys.copy()
+
 for key, value in data:
-    h = simple_hash(key) # our hash function
-    print(key, h) 
-    # our hash function
-    # orange 1
-    # apple 7 
-    # lemon 8 
-    # grape 3 
-    # melon 9 
+    h = simple_hash(key)
+    print(key, h)
+    keys[h] = key
+    values[h] = value
+    
+print(keys)
+print(values)
+# keys and values in correct positions in lists
+# ['', 'orange', '', 'grape', '', '', '', 'apple', 'lemon', 'melon']    
+# ['', 'a sweet, orange, citrus fruit', '', 'a small, sweet fruit growing in bunches',
+# '', '', '', 'good for making cider', 
+# 'a sour, yellow citrus fruit', 'sweet and juicy']
+
+print()
+value = get("banana")
+print(value)
