@@ -7032,3 +7032,13 @@
 .venv/share/jupyter/kernels/python3/logo-32x32.png
 .venv/share/jupyter/kernels/python3/logo-64x64.png
 .venv/share/man/man1/ipython.1.gz
+.venv/Lib/site-packages/pip-21.2.3.dist-info/entry_points.txt
+.venv/Lib/site-packages/pip-21.2.3.dist-info/INSTALLER
+.venv/Lib/site-packages/pip-21.2.3.dist-info/LICENSE.txt
+.venv/Lib/site-packages/pip-21.2.3.dist-info/METADATA
+.venv/Lib/site-packages/pip-21.2.3.dist-info/RECORD
+.venv/Lib/site-packages/pip-21.2.3.dist-info/REQUESTED
+.venv/Lib/site-packages/pip-21.2.3.dist-info/top_level.txt
+.venv/Lib/site-packages/pip-21.2.3.dist-info/WHEEL
+.venv/Lib/site-packages/pip/_vendor/appdirs.py
+.venv/Lib/site-packages/pip/_vendor/__pycache__/appdirs.cpython-39.pyc
