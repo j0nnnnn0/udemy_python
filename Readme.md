@@ -36,3 +36,4 @@
 10. https://docs.python.org/3/library/typing.html Typing - support for type hints
 11. https://www.python.org/dev/peps/pep-3107/ Function Annotation
 12. https://www.python.org/dev/peps/pep-0008/ PEP 8  annotation for default values
+13. https://docs.python.org/3/library/stdtypes.html#dict Standard typer - Dict
