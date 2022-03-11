@@ -40,4 +40,4 @@
 14. https://docs.python.org/3/library/copy.html Copy (deep vs shallow)
 15. https://docs.python.org/3.10/glossary.html#term-hashable (term hashable)
 16. https://en.wikipedia.org/wiki/Hash_function (Hash Function Wikipedia)
-17. https://docs.python.org/3/library/stdtypes.html#set 
+17. https://docs.python.org/3/library/stdtypes.html#set (sets)
