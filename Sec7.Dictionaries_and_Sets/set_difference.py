@@ -1,7 +1,7 @@
 
 # Python Programming Class - Udemy 15.04.2022
 
-# Dictionaries and Sets -set intersection
+# Dictionaries and Sets -set difference
 
 
 from cgitb import small
@@ -12,7 +12,6 @@ def cls():
 cls()
 
 # ----
-
 from primes_and_squares import squares_generator, primes_generator
 
 evens = set(range(0,50,2))
@@ -26,9 +25,12 @@ print(primes)
 squares = set(squares_generator(100))
 print(squares)
 
-print(odds.intersection(squares))
-print(evens & squares)
+# odds that are primes
 
-#pass an iterable to the method
-even_squares = evens.intersection(squares_generator(100))
-print(even_squares)
+# using the method
+print(odds.difference(primes))
+# {1, 33, 35, 39, 9, 45, 15, 49, 21, 25, 27}
+
+#using the operator
+print(odds - primes)
+# {1, 33, 35, 39, 9, 45, 15, 49, 21, 25, 27}
