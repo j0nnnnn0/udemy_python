@@ -1,6 +1,6 @@
 # Python Programming Class - Udemy 09.04.2023
 
-#IO 
+#IO - read from a text file
 
 import os
 from typing import ValuesView
@@ -11,4 +11,9 @@ cls()
 
 # ----------
 
+jabber = open("./TextFiles/Jabberwocky.txt", 'r')
 
+for line in jabber:
+    print(line, end='')
+
+jabber.close()
