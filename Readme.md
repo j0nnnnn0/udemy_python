@@ -42,3 +42,55 @@
 16. https://en.wikipedia.org/wiki/Hash_function (Hash Function Wikipedia)
 17. https://docs.python.org/3/library/stdtypes.html#set (sets)
 18. https://docs.python.org/3/library/stdtypes.html#frozenset.union (union in sets)
+
+## Python cheatsheets
+1. classes
+2. functions
+3. maths
+4. packages
+5. strings
+6. lists
+7. dictionaries
+8. sets
+9. tuples
+10. exceptions
+11. iterators
+12. generators
+13. comprehensions
+14. lambda
+15. map
+16. filter
+17. reduce
+18. multiprocessing
+19. threading
+20. logging
+21. decorators
+22. context managers
+23. property
+24. descriptors
+25. type hints
+26. type checking
+27. type conversion
+28. type introspection
+29. duck typing
+30. abstract base classes
+31. magic methods
+32. async
+33. coroutines
+34. asyncio
+35. modules
+36. packages
+37. pip
+38. virtual environments
+39. command line arguments
+40. file io
+41. csv
+42. json
+43. pickle
+44. sqlite
+45. datetime
+46. time
+47. os
+48. shutil
+49. glob
+
